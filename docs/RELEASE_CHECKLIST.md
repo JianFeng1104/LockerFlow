@@ -17,7 +17,7 @@
 - [x] Deployment variables documented
 - [x] Git repository initialized
 - [x] GitHub repository published
-- [ ] Railway deployment verified
+- [x] Railway deployment verified
 - [ ] Vercel deployment verified
 - [x] MIT License selected by project owner
 

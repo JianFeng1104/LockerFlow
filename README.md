@@ -181,6 +181,8 @@ npm run build
 
 后端与 MySQL 使用 Railway，前端使用 Vercel。前端产物位于 `frontend/dist/`，通过同源 `/api` 反向代理访问 Railway 后端；Railway 运行端口由平台 `PORT` 环境变量提供。项目不依赖 Docker。
 
+Railway API：<https://backend-production-f1f4f.up.railway.app>
+
 项目采用 [MIT License](LICENSE)。
 
 ## Future Improvements
