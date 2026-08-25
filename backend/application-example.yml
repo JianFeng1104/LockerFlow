@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/lockerflow?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai
+    username: lockerflow
+    password: change-me
+
+lockerflow:
+  expiration:
+    scheduling-enabled: ${EXPIRATION_SCHEDULING_ENABLED:true}
+    fixed-delay: ${EXPIRATION_FIXED_DELAY:PT15M}
+    initial-delay: ${EXPIRATION_INITIAL_DELAY:PT1M}
+  security:
+    jwt:
+      secret-base64: ${JWT_SECRET_BASE64}
+      issuer: ${JWT_ISSUER:lockerflow}
+      access-token-ttl: ${JWT_ACCESS_TOKEN_TTL:PT30M}

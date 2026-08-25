@@ -1,0 +1,33 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+**/application-local.yml
+**/application-local.yaml
+
+# Java / Maven
+**/target/
+*.log
+hs_err_pid*
+
+# Node / Vite
+**/node_modules/
+**/dist/
+**/.vite/
+**/coverage/
+**/.coverage/
+**/.cache/
+*.tmp
+*.pid
+logs/
+
+# IDEs and operating systems
+.idea/
+.vscode/
+.vs/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local tooling
+.codex/

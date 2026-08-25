@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: lockerflow-backend
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        jdbc:
+          time_zone: UTC
+  flyway:
+    enabled: true
+
+server:
+  port: ${PORT:8080}
+  error:
+    include-message: never
+
+lockerflow:
+  expiration:
+    scheduling-enabled: ${EXPIRATION_SCHEDULING_ENABLED:true}
+    fixed-delay: ${EXPIRATION_FIXED_DELAY:PT15M}
+    initial-delay: ${EXPIRATION_INITIAL_DELAY:PT1M}
+  security:
+    jwt:
+      secret-base64: ${JWT_SECRET_BASE64}
+      issuer: ${JWT_ISSUER:lockerflow}
+      access-token-ttl: ${JWT_ACCESS_TOKEN_TTL:PT30M}
