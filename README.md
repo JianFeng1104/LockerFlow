@@ -5,6 +5,8 @@
 
 GitHub：<https://github.com/JianFeng1104/LockerFlow>
 
+在线体验：<https://locker-flow.vercel.app>
+
 LockerFlow 是一个面向快递员、用户和管理员的全栈快递柜管理项目。快递员将包裹存入站点后，系统按包裹尺寸自动选择最合适的空闲柜格，生成一次性取件码；用户在身份校验后完成取件，柜格随即释放。
 
 管理员可以维护站点与柜格、查看实时容量及四种柜格状态，并手动触发过期生命周期处理。项目重点展示真实 REST API 集成、后端授权、事务边界、并发竞争处理和可验证的端到端业务闭环。
@@ -183,6 +185,10 @@ npm run build
 
 Railway API：<https://backend-production-f1f4f.up.railway.app>
 
+Vercel Web：<https://locker-flow.vercel.app>
+
+生产环境已验证完整链路：Vercel 页面与同源 `/api` 代理 → Railway Spring Boot → Railway MySQL。公网验收覆盖 ADMIN、COURIER、CUSTOMER 三种角色，以及 `Store → Pickup → Grid` 闭环；入柜后柜格变为占用，用户取件后包裹变为 `PICKED_UP`，同一柜格恢复为 `AVAILABLE`。演示账号、站点和柜格仅在独立 Railway 数据库中安全初始化，密码与哈希均不提交到仓库。
+
 项目采用 [MIT License](LICENSE)。
 
 ## Future Improvements
@@ -196,4 +202,4 @@ Railway API：<https://backend-production-f1f4f.up.railway.app>
 
 ## 项目状态
 
-当前功能、自动化测试、真实本地闭环和发布文档均已完成准备，项目所有者已授权以 MIT License 发布到 GitHub，并部署至 Railway 与 Vercel。
+当前功能、自动化测试、本地与公网业务闭环均已完成验证。项目已使用 MIT License 发布到 GitHub，并完成 Railway 与 Vercel 生产部署。

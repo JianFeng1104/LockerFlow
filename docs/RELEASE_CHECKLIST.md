@@ -18,9 +18,12 @@
 - [x] Git repository initialized
 - [x] GitHub repository published
 - [x] Railway deployment verified
-- [ ] Vercel deployment verified
+- [x] Vercel deployment verified
+- [x] Public ADMIN / COURIER / CUSTOMER login verified
+- [x] Public Store → Pickup → Grid workflow verified
+- [x] Public demo data initialized without committed credentials
 - [x] MIT License selected by project owner
 
 ## Publication gate
 
-Secrets gate、截图与许可证均已确认。剩余发布步骤为 Git/GitHub 推送、Railway/Vercel 部署和公网业务闭环验证。
+Secrets gate、截图、许可证、GitHub 发布、Railway/Vercel 部署和公网业务闭环均已确认，发布结果为 READY。

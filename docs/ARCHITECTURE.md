@@ -64,3 +64,5 @@ Parcel → PickupCode → LockerCell
 ## Runtime and deployment
 
 后端使用环境变量注入数据库连接和 JWT 密钥，可打包为可执行 JAR，并与 MySQL 部署到 Railway。前端生产构建输出静态 `dist/` 并部署到 Vercel，通过同源 `/api` 反向代理访问 Railway 后端。当前部署不依赖 Docker。
+
+生产地址为 `https://locker-flow.vercel.app`，API 地址为 `https://backend-production-f1f4f.up.railway.app`。已通过公网浏览器流程验证 Vercel rewrite、Spring Security/JWT、事务化入柜与取件、MySQL 状态持久化，以及取件完成后的柜格释放。
