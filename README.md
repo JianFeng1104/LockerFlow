@@ -3,6 +3,8 @@
 > 智能快递柜与取件管理平台  
 > Smart Parcel Locker & Pickup Management Platform
 
+GitHub：<https://github.com/JianFeng1104/LockerFlow>
+
 LockerFlow 是一个面向快递员、用户和管理员的全栈快递柜管理项目。快递员将包裹存入站点后，系统按包裹尺寸自动选择最合适的空闲柜格，生成一次性取件码；用户在身份校验后完成取件，柜格随即释放。
 
 管理员可以维护站点与柜格、查看实时容量及四种柜格状态，并手动触发过期生命周期处理。项目重点展示真实 REST API 集成、后端授权、事务边界、并发竞争处理和可验证的端到端业务闭环。

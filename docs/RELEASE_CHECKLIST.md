@@ -15,8 +15,8 @@
 - [x] Demo workflow verified
 - [x] `.gitignore` ready
 - [x] Deployment variables documented
-- [ ] Git repository initialized
-- [ ] GitHub repository published
+- [x] Git repository initialized
+- [x] GitHub repository published
 - [ ] Railway deployment verified
 - [ ] Vercel deployment verified
 - [x] MIT License selected by project owner
