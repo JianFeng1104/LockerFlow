@@ -1,0 +1,19 @@
+:{$PORT} {
+	encode zstd gzip
+
+	@health path /health
+	respond @health "ok" 200
+
+	@api path /api/*
+	handle @api {
+		reverse_proxy {$BACKEND_ORIGIN} {
+			header_up Host {upstream_hostport}
+		}
+	}
+
+	root * /srv
+	handle {
+		try_files {path} /index.html
+		file_server
+	}
+}
